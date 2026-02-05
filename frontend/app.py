@@ -1,8 +1,12 @@
 import streamlit as st
 import pandas as pd
-
+import pltly.express as px
+from io import BytesIO
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.pagesizes import A4
 import matplotlib.pyplot as plt
-
+import os
 
 #Là nous sommes sur la configuration
 st.set_page_config(page_title="DataMarché - Interne", layout="wide")
