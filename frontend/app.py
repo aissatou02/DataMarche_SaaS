@@ -74,7 +74,7 @@ if fichier_actuel:
     st.header(" Visualisation")
 
     chart_type = st.radio("Type de graphique", ["Barre", "Ligne", "Camembert"], horizontal=True)
-
+     
     if chart_type == "Barre":
         fig = px.bar(df_plot, x=col_cat, y=col_val)
         st.plotly_chart(fig, use_container_width=True)
@@ -91,6 +91,7 @@ if fichier_actuel:
             fig = px.pie(df_pie, names=col_cat, values=col_val, hole=0.4)
             fig.update_traces(textinfo="percent+label")
             st.plotly_chart(fig, use_container_width=True)
+    
 
     # Je définis mes KPI() ou du moins les metriques
     st.header(" Indicateurs clés")
